@@ -88,7 +88,8 @@ The repo's original root `CLAUDE.md` (167 lines of architecture notes, design de
 
 Project-specific gotchas, flaky tests, env-only checks, anything that future-me needs to know. Keep it short — git carries the rest.
 
-- **Default branch is `master`**, not `main`.
+- **Default branch is `master`**, not `main`. td-flow commands document `origin/main` — substitute `master` everywhere.
+- **GitHub Issues are disabled on this repo** (forks default to off). Every td-flow command that files issues — `/td-flow-park`, `/td-flow-mailbox`, `/td-flow-snapshot`, and `/td-flow-close`'s parking step — will fail until issues are enabled in repo settings. Until then, `BACKLOG.md` is the only parking place and it must not be flushed.
 - Fork of `karpathy/llm-council`. Upstream is explicitly unmaintained ("vibe code alert" in the README) — no PRs upstream, and don't expect upstream fixes. Diverging freely is the intended use.
 - `data/` is gitignored — conversation history is local only and disappears on a fresh clone.
 - The original CLAUDE.md references a `test_openrouter.py` connectivity script; it does not exist in this repo.
